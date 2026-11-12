@@ -1,0 +1,39 @@
+   Compiling aistudio-agent-data v0.1.0 (/workspace/shared/aistudio-native-check/crates/aistudio-agent-data)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.59s
+     Running unittests src/lib.rs (/workspace/shared/aistudio-native-check/crates/aistudio-agent-data/target/debug/deps/aistudio_agent_data-f73214692bb092b9)
+
+running 31 tests
+test v2_auth::tests::account_change_and_restart_invalidate ... ok
+test v2_auth::tests::pairing_requires_ui_and_secret_and_revoke_works ... ok
+test v2_auth::tests::denied_expired_and_revoked_before_poll_never_issue_credentials ... ok
+test v2_auth::tests::grant_expiry_is_checked_on_every_request ... ok
+test v2_routes::tests::account_is_boolean_projection_only ... ok
+test server::discovery_tests::custom_root_discovery_is_public_private_mode_and_owned_cleanup_only ... ok
+test v2_routes::tests::batch_uses_real_run_id_not_a_task_style_id ... ok
+test v2_routes::tests::channels_read_only_typed_owner_projection ... ok
+test v2_routes::tests::catalog_has_48_real_actions_and_no_secret_read ... ok
+test v2_routes::tests::discovery_does_not_accept_untrusted_config_or_urls ... ok
+test v2_routes::tests::global_action_cannot_borrow_a_scoped_draft ... ok
+test v2_routes::tests::export_retry_requires_export_permission ... ok
+test v2_routes::tests::credential_write_is_separately_granted_and_never_echoed ... ok
+test v2_routes::tests::channel_cas_version_is_projected_forwarded_and_safely_returned ... ok
+test v2_routes::tests::global_workflow_cannot_borrow_scoped_draft ... ok
+test v2_routes::tests::ordinary_patch_cannot_replace_secrets_or_inject_unknown_objects ... ok
+test v2_routes::tests::orchestration_never_echoes_nested_provider_error_strings ... ok
+test v2_routes::tests::history_ownership_not_caller_hint_controls_retry ... ok
+test v2_routes::tests::ipc_error_never_echoes_provider_failure_or_secret ... ok
+test v2_routes::tests::plugin_schema_keeps_write_only_field_metadata_not_values ... ok
+test v2_routes::tests::retry_requires_generate_before_any_lookup ... ok
+test v2_routes::tests::plugin_presets_obey_manifest_secret_fields ... ok
+test v2_routes::tests::task_control_resolves_actual_owner_before_mutating ... ok
+test v2_routes::tests::task_list_filters_scope_and_never_returns_snapshot ... ok
+test v2_routes::tests::task_results_are_locatable_without_raw_provider_errors ... ok
+test v2_routes::tests::workflow_resume_checks_actual_owner ... ok
+test v2_routes::tests::workflow_seed_tasks_must_belong_to_granted_draft ... ok
+test v2_session_tests::legacy_token_cannot_bypass_v2_approval_by_default ... ok
+test v2_routes::tests::write_only_schema_strips_nested_defaults_enums_and_presets ... ok
+test v2_session_tests::independent_client_requires_app_approval_then_revocation_takes_effect ... ok
+test v2_routes::tests::all_registered_intents_use_the_existing_intent_channel ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.01s
+

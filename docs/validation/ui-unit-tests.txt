@@ -1,0 +1,11 @@
+✔ authorization distinguishes all drafts, no drafts, and explicit draft IDs (0.735548ms)
+✔ expiry and dismissed request do not re-open; a new request is discoverable (0.640505ms)
+✔ real shell mounts panel; settings opens it without route changes or public HTTP approval (0.627996ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 113.191694

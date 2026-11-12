@@ -1,0 +1,23 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.08s
+     Running unittests src/lib.rs (/workspace/shared/channel-owner-validation/crates/aistudio-config-store/target/debug/deps/aistudio_config_store-9780b818bcc7c6d5)
+
+running 16 tests
+test config::agent_channels::tests::nested_host_metadata_cannot_restore_schema_secret_values ... ok
+test config::agent_channels::tests::new_capability_custom_routing_cannot_exfiltrate_root_plugin_secrets ... ok
+test config::agent_channels::tests::plugin_legacy_secret_alias_is_replaced_or_cleared_before_endpoint_changes ... ok
+test config::agent_channels::tests::create_and_public_list_never_reveal_values_references_or_rows ... ok
+test config::agent_channels::tests::dynamic_context_uses_saved_connection_and_only_declared_actions ... ok
+test config::agent_channels::tests::schema_write_only_host_named_fields_cannot_return_through_host_projection ... ok
+test config::agent_channels::tests::existing_inherited_capability_endpoint_change_requires_root_replacement ... ok
+test config::agent_channels::tests::explicit_clear_and_replacement_are_atomic ... ok
+test config::agent_channels::tests::capability_null_clear_does_not_restore_root_schema_secret_at_new_destination ... ok
+test config::agent_channels::tests::endpoint_plugin_and_new_inherited_capability_changes_cannot_reuse_old_secrets ... ok
+test config::agent_channels::tests::independent_owner_transactions_merge_current_fields_without_lost_updates ... ok
+test config::agent_channels::tests::non_secret_patches_preserve_credentials_and_unrelated_settings ... ok
+test config::agent_channels::tests::style_reference_patch_never_roundtrips_masked_settings_or_touches_credentials ... ok
+test config::agent_channels::tests::public_patch_cannot_write_secret_fields_even_nested_array_schemas ... ok
+test config::agent_channels::tests::stale_version_rejects_without_modifying_config_or_credentials ... ok
+test config::agent_channels::tests::schema_private_arrays_require_credential_input_and_can_be_cleared ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s
+

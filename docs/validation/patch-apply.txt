@@ -1,0 +1,4 @@
+{"ok": true, "mode": "check", "files": 31, "baseCommit": "5423be21112b61b0728cf10a0bc9883e0e308581"}
+{"ok": true, "mode": "applied", "files": 31, "baseCommit": "5423be21112b61b0728cf10a0bc9883e0e308581"}
+{"ok": true, "mode": "applied", "files": 0, "baseCommit": "5423be21112b61b0728cf10a0bc9883e0e308581"}
+Conflict correctly rejected without changing target.

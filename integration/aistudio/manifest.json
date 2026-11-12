@@ -1,0 +1,161 @@
+{
+  "repository": "adam-web3-developer9/aistudio",
+  "baseCommit": "5423be21112b61b0728cf10a0bc9883e0e308581",
+  "files": [
+    {
+      "path": "crates/aistudio-account/src/service.rs",
+      "beforeSha256": "9d38bb43b3296cc2cdfe800e6c24cdf666bc7b119935cbb0f12970fc9a92c16e",
+      "afterSha256": "e918f2ba37d60e16230a215f75ad265d6ef54d5a034b14fee9b604739df75519"
+    },
+    {
+      "path": "crates/aistudio-agent-data/src/lib.rs",
+      "beforeSha256": "88958a9ee0fec1b2f4c72fea62bc98a3657eaf0f62694d14d6883dec3cd2981f",
+      "afterSha256": "41120930a65efd956e1e4ea88a638adbd401131245ec98df43d8e32816629cd1"
+    },
+    {
+      "path": "crates/aistudio-agent-data/src/server.rs",
+      "beforeSha256": "06dc74cefffd8ae898d8b34e693b62cc46577bfc935c1b88a6f991a920053ce9",
+      "afterSha256": "2b8a73e004b39370471d5dded822eae56d452a55e6863358d782a11c41ee3785"
+    },
+    {
+      "path": "crates/aistudio-agent-data/src/v2_auth.rs",
+      "beforeSha256": null,
+      "afterSha256": "c1d7b0f14d0969047c656dda77676c4dddaa867cc7cd3b4628cbd788477ee172"
+    },
+    {
+      "path": "crates/aistudio-agent-data/src/v2_routes.rs",
+      "beforeSha256": null,
+      "afterSha256": "232ac085ca49241b1b45d025dab66b88351ab5438e18cd9bdf4e8735f22ae0a9"
+    },
+    {
+      "path": "crates/aistudio-agent-data/tests/adapter.rs",
+      "beforeSha256": "4d0aae7d237f39fe95ec52093990ec8f82ef4e8d8286be1c149fdb2206f88bdc",
+      "afterSha256": "073625ab2066fa412b497a469e421673ce9649966dcc0a231fed042bfcd90e4e"
+    },
+    {
+      "path": "crates/aistudio-agent-data/tests/golden.rs",
+      "beforeSha256": "1f6db4b4cf4cd0e2fbae1a524caef36ece876fe3677a98aa035d7768dd888b2b",
+      "afterSha256": "b8df096e3c53ff353343bb2a47341a9006e51695684df09b273cc572410a565a"
+    },
+    {
+      "path": "crates/aistudio-agent-data/tests/native.rs",
+      "beforeSha256": "a78e16273824a18ce5dea101bf0ef14c4fbae56d4dfd331732bb67e451158fa6",
+      "afterSha256": "3a5b62f1cba45fbc3cd1e08709bc6909cee0285b1e28a8457c292f2138bb4b39"
+    },
+    {
+      "path": "crates/aistudio-config-store/src/config/agent_channels/tests.rs",
+      "beforeSha256": null,
+      "afterSha256": "a4ac0e0c4db354b183e0d0aa0fdd473693201b4c35a80125740c3e32c4dd7cd5"
+    },
+    {
+      "path": "crates/aistudio-config-store/src/config/agent_channels.rs",
+      "beforeSha256": null,
+      "afterSha256": "ae68cfcf59d9ec851236b12948f5390ac04b7c8da2e4629d0586def9773dd13b"
+    },
+    {
+      "path": "crates/aistudio-config-store/src/config.rs",
+      "beforeSha256": "0f6eaeb3621170183a30835c523d97d81c93789b9d375da93ccda81468d366f2",
+      "afterSha256": "6033b356bf9e485f18559297d4c43cf6b59ec12376c691a583a4580fa062d5f2"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/COVERAGE.md",
+      "beforeSha256": "54de41b4516e36d6096c772e2dfd03c22fe6011dd4ffc7a6ab5f7936c657a13a",
+      "afterSha256": "37ffe09f951074572f2b1512a6d81a3633b32e2986733b5282454169fe25f9ef"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/channels.json",
+      "beforeSha256": "b6a6f94ca2354ec2a96b0844b976c0b170d2e0dbb62ac1c3f598425a74d4a375",
+      "afterSha256": "8566b72bf8af30c85c6c797fa93f1780cec1d4149fa4f1a54bf368a20161ab24"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/coverage.json",
+      "beforeSha256": "a18cc777ef6aa9d5af34408cde6ea60d60e17418392808d54e6348dbe0628461",
+      "afterSha256": "64cb184a8689c233b09c44db8a6a94f4fec95ab426444d49e6d670151f527af4"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/src/agent_channels/public.rs",
+      "beforeSha256": null,
+      "afterSha256": "4e373f07653474d1b6f6a83431f42a8d22ab7fe8b5612daaf815993e79fe921e"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/src/agent_channels.rs",
+      "beforeSha256": null,
+      "afterSha256": "6e9e95a1d70ec2a892022680e2805ce59f4e232e9987c718ad30d0c7c06f7c9b"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/src/data.rs",
+      "beforeSha256": "f9d81e3d0dab90326365f1098c6fa3e5682fd0c305d233c874a8abaf1e8a9a53",
+      "afterSha256": "16932d0eda2094e5f9282a129e318b5b0e560f76a5342a0f06d6d8a466ec6708"
+    },
+    {
+      "path": "crates/aistudio-desktop-api/src/lib.rs",
+      "beforeSha256": "f3af694d0988a03c8228baf92f0eee4007f56bab612321a520fd7d9f7224c05b",
+      "afterSha256": "7a8b1d1de1e7beba61fdb80a16d31ac97f8330de23bd4dbf0bfdbf00a445fa3f"
+    },
+    {
+      "path": "desktop-contract/ipc-contract.cjs",
+      "beforeSha256": "ac01b52a96f6b1ceb9ac350a27bfbdc718ec0a1a526e932820bb83f3ec3a8554",
+      "afterSha256": "c52c1fa285d4d7de6c4d6083fa1c10645a5709f6935beb1b1abc20a029b1412a"
+    },
+    {
+      "path": "src/App.tsx",
+      "beforeSha256": "f007916c99e74c2e22dd564417b81552d2f5d0392cc9df96dd50337c727d668b",
+      "afterSha256": "5f3b87ec6ac32fca3f8e3569daa4640bb6646038fd6320ef07ff981a8f9c5d89"
+    },
+    {
+      "path": "src/core/agent-authorization/authorization.test.mjs",
+      "beforeSha256": null,
+      "afterSha256": "fc3f52fa78b18408ddd7943e0cf0b986b6800b0ff54cb700adc8237da86684aa"
+    },
+    {
+      "path": "src/core/agent-authorization/authorization.ts",
+      "beforeSha256": null,
+      "afterSha256": "defca327601ee587d0d5ab5cb5f2285be0f2ae75413bd5ebe13f84f9fb008dfa"
+    },
+    {
+      "path": "src/features/agent-authorization/AgentAuthorizationPanel.tsx",
+      "beforeSha256": null,
+      "afterSha256": "e25ab59c05a08651f99a26681920fc4dc4b7aa07ed19d4b098b1a973cb09da48"
+    },
+    {
+      "path": "src/features/agent-authorization/authorization.dom-check.mjs",
+      "beforeSha256": null,
+      "afterSha256": "79ee91a1fa21396a216006820ed130e4f17d1bd19934c786cfb1cfd36bc3b12a"
+    },
+    {
+      "path": "src/pages/SettingsPage.tsx",
+      "beforeSha256": "14a3f65c571658b17b9730d0341c5a6850d770afb16029a6f3ae957e97cc4cd0",
+      "afterSha256": "90e1a518326a178603b7b63757f7973896356171604b98625fbd5f19b479a751"
+    },
+    {
+      "path": "src/store/agentAuthorizationClient.ts",
+      "beforeSha256": null,
+      "afterSha256": "97a5ff0d7f984fa45c5adbcd61bb77cd30a3544eb621b7a40008bc0f5b62bfe7"
+    },
+    {
+      "path": "src-tauri/legacy-read-only-channels.json",
+      "beforeSha256": "e98247ea9236cffbff5e7b5ca3012a3d6509bdcfbe2726ec214897092039e8fa",
+      "afterSha256": "61b0c90b2225a94d01f946b83b912e4d8a208ba3f48fdb0fca4daee6ae86b5da"
+    },
+    {
+      "path": "src-tauri/src/agent_authorization.rs",
+      "beforeSha256": null,
+      "afterSha256": "47547f0536b2287a27635d96a019f517fa6e47c0af8b793ba8b2951262f8a40e"
+    },
+    {
+      "path": "src-tauri/src/agent_service.rs",
+      "beforeSha256": "0decd233255f440d2191543cdf57837d88dc7e3096182df663349387b677854d",
+      "afterSha256": "63e3044c202a5708002d5cbb3bc3d29aba070c7cda2bbcbd463d763a7c952402"
+    },
+    {
+      "path": "src-tauri/src/build_identity.rs",
+      "beforeSha256": "7863dd335b347b7befc144f6b21c4e1db4dc65051ec4203ffd24388129975c24",
+      "afterSha256": "83f3c1b329c54698d46a39530abc6ffc08ac8a95a5b3849ac4dc34d80408c733"
+    },
+    {
+      "path": "src-tauri/src/lib.rs",
+      "beforeSha256": "e4d089d8bedf14916b12552a64b9cc77bfbf605eafde26458217ae4e456904aa",
+      "afterSha256": "9c7fb22ade2dd73aaf07027afcf086e105a3458f075c08959df91a6b4b7b414c"
+    }
+  ]
+}

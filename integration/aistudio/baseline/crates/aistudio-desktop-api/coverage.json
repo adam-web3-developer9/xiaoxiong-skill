@@ -1,0 +1,1591 @@
+[
+  {
+    "channel": "account:status",
+    "servedBy": "main",
+    "module": "account/ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "account:action",
+    "servedBy": "main",
+    "module": "account/ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "open-external-url",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::effects"
+  },
+  {
+    "channel": "open-tutorial-window",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::effects"
+  },
+  {
+    "channel": "app-update-check",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "app-update-download",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "app-update-cancel",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "app-update-channel",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "app-update-install",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "app-update-get-status",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::updates"
+  },
+  {
+    "channel": "host:current-epoch",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::native bridge (src-tauri/src/bridge.rs)"
+  },
+  {
+    "channel": "host:build-info",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::native bridge (src-tauri/src/bridge.rs)"
+  },
+  {
+    "channel": "host:verify-build",
+    "servedBy": "main",
+    "module": "main.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::native bridge (src-tauri/src/bridge.rs)"
+  },
+  {
+    "channel": "local-data:get-info",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:kv-get",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:settings-snapshot",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:drafts-list",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:drafts-list-summaries",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:drafts-get",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:image-editor-list",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:image-editor-get",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:rows-get",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:revisions",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:draft-summary-snapshot",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::read"
+  },
+  {
+    "channel": "local-data:secret-set",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:secret-delete",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:secret-status",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:secret-store-state",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:tasks-list",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:execution-logs-list",
+    "servedBy": "main",
+    "module": "local-data.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:query",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:stats",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:detail",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:facets",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:info",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:latest-terminal",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:export",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::effects"
+  },
+  {
+    "channel": "task-history:reveal",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::effects"
+  },
+  {
+    "channel": "network-proxy:get-status",
+    "servedBy": "main",
+    "module": "network-proxy.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::network_proxy"
+  },
+  {
+    "channel": "network-proxy:apply",
+    "servedBy": "main",
+    "module": "network-proxy.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::network_proxy"
+  },
+  {
+    "channel": "network-proxy:test",
+    "servedBy": "main",
+    "module": "network-proxy.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::network_proxy"
+  },
+  {
+    "channel": "douyin:resolve",
+    "servedBy": "main",
+    "module": "douyin-download.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "douyin:choose-destination",
+    "servedBy": "main",
+    "module": "douyin-download.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "zhihu:read-manuscript",
+    "servedBy": "main",
+    "module": "zhihu-manuscript.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::zhihu"
+  },
+  {
+    "channel": "zhihu:resolve-link",
+    "servedBy": "main",
+    "module": "zhihu-manuscript.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::zhihu"
+  },
+  {
+    "channel": "prompts:export-to-folder",
+    "servedBy": "main",
+    "module": "prompt-export.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompt_export"
+  },
+  {
+    "channel": "folder-rename:select",
+    "servedBy": "main",
+    "module": "folder-rename.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::folder_rename"
+  },
+  {
+    "channel": "folder-rename:list",
+    "servedBy": "main",
+    "module": "folder-rename.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::folder_rename"
+  },
+  {
+    "channel": "folder-rename:apply",
+    "servedBy": "main",
+    "module": "folder-rename.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::folder_rename"
+  },
+  {
+    "channel": "folder-rename:restore",
+    "servedBy": "main",
+    "module": "folder-rename.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::folder_rename"
+  },
+  {
+    "channel": "chatgpt-relay:status",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "chatgpt-relay:login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "chatgpt-relay:check-login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "chatgpt-relay:clear-login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "chatgpt-relay:clear-skipped",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "chatgpt-relay:list-skipped",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_chatgpt_relay"
+  },
+  {
+    "channel": "update:prepare-install",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "internal-only",
+    "rust": "aistudio-desktop-api::updates (internal-only; renderer rejected, matching existing contract)"
+  },
+  {
+    "channel": "update:release-install",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "internal-only",
+    "rust": "aistudio-desktop-api::updates (internal-only; renderer rejected, matching existing contract)"
+  },
+  {
+    "channel": "update:drain-install",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "internal-only",
+    "rust": "aistudio-desktop-api::updates (internal-only; renderer rejected, matching existing contract)"
+  },
+  {
+    "channel": "update:install-status",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "internal-only",
+    "rust": "aistudio-desktop-api::updates (internal-only; renderer rejected, matching existing contract)"
+  },
+  {
+    "channel": "ai-task:enqueue",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "ai-task:enqueue-bulk",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "ai-task:intent",
+    "servedBy": "host",
+    "nodeSources": [],
+    "actions": [
+      "videoCaseHumanity",
+      "videoCaseEmotion",
+      "videoCaseAssets",
+      "videoCasePull",
+      "videoCaseProduction",
+      "videoCaseAssetImage",
+      "videoCaseAssetEdit",
+      "seriesStructure",
+      "scriptGenerate",
+      "directorStyleExtraction",
+      "promoScript",
+      "sceneRefine",
+      "scriptInfo",
+      "scriptScore",
+      "scriptEmotionCurve",
+      "viralOpenings",
+      "scriptRewrite",
+      "requiredAssets",
+      "assetExtraction",
+      "watermarkRemove",
+      "jianyingExport",
+      "comicJianyingExport",
+      "rhythmRerun",
+      "agentChat",
+      "modelConnectionTest",
+      "libraryAssetValidation",
+      "storyboard",
+      "voiceMatch",
+      "voiceDesign",
+      "voiceSample",
+      "voiceGeneration",
+      "shotVideo",
+      "videoPrompt",
+      "videoPromptCondense",
+      "assetImages",
+      "imagePrompt",
+      "shotImage",
+      "assetImage",
+      "assetState",
+      "assetRefine",
+      "assetValidation",
+      "shotRefine",
+      "coverGenerate",
+      "coverEdit",
+      "globalReference",
+      "comicStyleReference",
+      "previewImageEdit",
+      "canvasGenerate"
+    ],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::intent (actions: videoCaseHumanity, videoCaseEmotion, videoCaseAssets, videoCasePull, videoCaseProduction, videoCaseAssetImage, videoCaseAssetEdit, seriesStructure, scriptGenerate, directorStyleExtraction, promoScript, sceneRefine, scriptInfo, scriptScore, scriptEmotionCurve, viralOpenings, scriptRewrite, requiredAssets, assetExtraction, watermarkRemove, jianyingExport, comicJianyingExport, rhythmRerun, agentChat, modelConnectionTest, libraryAssetValidation, storyboard, voiceMatch, voiceDesign, voiceSample, voiceGeneration, shotVideo, videoPrompt, videoPromptCondense, assetImages, imagePrompt, shotImage, assetImage, assetState, assetRefine, assetValidation, shotRefine, coverGenerate, coverEdit, globalReference, comicStyleReference, previewImageEdit, canvasGenerate)"
+  },
+  {
+    "channel": "ai-task:estimate",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "batch:estimate",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "workflow:estimate",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "ai-task:recheck",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_recovery"
+  },
+  {
+    "channel": "ai-task:start-now",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "ai-task:retry",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_controls"
+  },
+  {
+    "channel": "ai-task:cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "ai-task:cancel-unsubmitted",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "ai-task:clear-finished",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "ai-task:inspect-image-provider",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_recovery"
+  },
+  {
+    "channel": "ai-task:manual-relay-list",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "ai-task:manual-relay-get",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "ai-task:manual-relay-answer",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "ai-task:manual-relay-use-api",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "ai-task:manual-relay-reset",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "ai-task:manual-relay-session",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_manual_relay"
+  },
+  {
+    "channel": "env:takeover-confirm",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "env:gate-status",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "env:provider-resume",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "batch:get",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "batch:list-active",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "batch:start",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "batch:pause",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_controls"
+  },
+  {
+    "channel": "batch:resume",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "batch:stop",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_controls"
+  },
+  {
+    "channel": "batch:retry-stage",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "batch:ledger",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "batch:progress",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "workflow:start",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "workflow:start-derived-draft-from-case",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "workflow:cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_controls"
+  },
+  {
+    "channel": "workflow:resume",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::task_preparation"
+  },
+  {
+    "channel": "workflow:list",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "workflow:get",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "tencent-vod:remove-watermark-batch",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "tencent-vod:upload-reference-video",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "asset-public-storage:upload",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "public-media:status",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "public-media:publish",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "public-media:renew",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::public_media"
+  },
+  {
+    "channel": "local-job:start",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:select",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:inspect",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:list",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:list-summaries",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:get",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:update",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:delete",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "video-analysis:export-report",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::local"
+  },
+  {
+    "channel": "local-data:asset-write",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media"
+  },
+  {
+    "channel": "local-data:asset-download",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_export"
+  },
+  {
+    "channel": "local-data:media-gc",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media"
+  },
+  {
+    "channel": "local-data:video-durations",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_auxiliary"
+  },
+  {
+    "channel": "save-media-as",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_export"
+  },
+  {
+    "channel": "export-assets-zip",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_export"
+  },
+  {
+    "channel": "export-jianying",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_export"
+  },
+  {
+    "channel": "jianying:store-bgm",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_auxiliary"
+  },
+  {
+    "channel": "jianying:delete-bgm",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::media_auxiliary"
+  },
+  {
+    "channel": "local-data:drafts-create",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:drafts-delete",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "local-data:drafts-duplicate",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "telemetry:report",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "telemetry:settings",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "telemetry:clear",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "search:query",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::search"
+  },
+  {
+    "channel": "local-data:settings-transfer-export",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::settings_transfer"
+  },
+  {
+    "channel": "local-data:settings-transfer-preview",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::settings_transfer"
+  },
+  {
+    "channel": "local-data:settings-transfer-apply",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::settings_transfer"
+  },
+  {
+    "channel": "local-data:settings-transfer-cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::settings_transfer"
+  },
+  {
+    "channel": "local-data:library-transfer-export",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::library_export"
+  },
+  {
+    "channel": "local-data:library-transfer-preview",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::library"
+  },
+  {
+    "channel": "local-data:library-transfer-apply",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::library"
+  },
+  {
+    "channel": "local-data:project-export",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-import",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-preview",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-progress",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-backups",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "local-data:project-restore",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::project"
+  },
+  {
+    "channel": "data:apply",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:kv-set",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:kv-delete",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:execution-logs-upsert",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:execution-logs-clear",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:sync",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "task-history:prune-snapshots",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "prompt:snapshot",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:revision",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:override:set",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:override:clear",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:stage-rules:set",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:stage-rules:clear",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:unit:create",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:unit:update",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:unit:delete",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:flow:save",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:flow:delete",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:flow:set-default",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:flow:select",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "prompt:preview",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::prompts"
+  },
+  {
+    "channel": "sharing:status",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:list",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:enable",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:disable",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:members",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:import",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:sync",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:resolve-conflict",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:jobs",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:job-start",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:job-cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "sharing:job-reconcile",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::legacy_sharing"
+  },
+  {
+    "channel": "package-sharing:action",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::package_sharing"
+  },
+  {
+    "channel": "package-sharing:progress",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::package_sharing"
+  },
+  {
+    "channel": "package-sharing:cancel",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::package_sharing"
+  },
+  {
+    "channel": "typetale:list",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:import",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:remove",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:runtime",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:set-runtime",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:params",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:save-params",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:ui",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:action",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:choose-archive",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "typetale:choose-python",
+    "servedBy": "host",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::plugins"
+  },
+  {
+    "channel": "diagnostics:export",
+    "servedBy": "native",
+    "module": "src-tauri/src/bridge.rs",
+    "nodeSources": [],
+    "status": "effect-or-domain-gap",
+    "rust": null
+  },
+  {
+    "channel": "ai-task:detail",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/tasks.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::tasks"
+  },
+  {
+    "channel": "channel-plugins:seed_status",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:initialize_seeds",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:catalog",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:list",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:configuration_options",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:choose_archive",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:install",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:install_catalog",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:set_enabled",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:remove",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:get_config",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "channel-plugins:save_config",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::channel_plugins"
+  },
+  {
+    "channel": "local-data:secret-reveal",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/data.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "local-data:secret-import-legacy",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/data.rs",
+    "nodeSources": [],
+    "status": "implemented",
+    "rust": "aistudio-desktop-api::data"
+  },
+  {
+    "channel": "joojo:login-open",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs",
+    "nodeSources": [],
+    "status": "effect-or-domain-gap",
+    "rust": null
+  },
+  {
+    "channel": "joojo:login-capture",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs",
+    "nodeSources": [],
+    "status": "effect-or-domain-gap",
+    "rust": null
+  },
+  {
+    "channel": "joojo:login-close",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs",
+    "nodeSources": [],
+    "status": "effect-or-domain-gap",
+    "rust": null
+  },
+  {
+    "channel": "jianying:select-draft-dir",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/jianying.rs",
+    "nodeSources": [],
+    "status": "effect-or-domain-gap",
+    "rust": null
+  }
+]

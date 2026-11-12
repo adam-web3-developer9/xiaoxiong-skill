@@ -1,0 +1,36 @@
+{
+  "name": "@xiaoxiong-ai/agent",
+  "version": "0.1.0",
+  "description": "小熊AI application-authorized Skill, CLI and MCP bridge",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "xiaoxiong": "./bin/xiaoxiong.mjs"
+  },
+  "exports": {
+    ".": "./src/client.mjs",
+    "./skills": "./src/skills.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "start": "node bin/xiaoxiong.mjs",
+    "mcp": "node bin/xiaoxiong.mjs mcp",
+    "test:integration": "node --test test/native-contract.test.mjs test/socket.test.mjs",
+    "test:protocol": "node --test test/transport.test.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "docs",
+    "examples",
+    "integration",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "UNLICENSED"
+}

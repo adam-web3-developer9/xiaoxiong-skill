@@ -1,0 +1,5 @@
+cwd: /tmp/aistudio-ui-validation
+command: node src/features/agent-authorization/authorization.dom-check.mjs
+harness: docs/validation/ui-dom-legacy-check.mjs.txt copied to this path
+PASS real antd DOM: auto-open, safe disclosure, dismiss, reopen, double-click approval, grant, revoke, expired button, legacy warning true/false
+exit_code: 0

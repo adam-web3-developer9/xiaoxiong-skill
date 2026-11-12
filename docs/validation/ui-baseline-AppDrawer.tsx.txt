@@ -1,0 +1,32 @@
+import { Drawer } from 'antd';
+import type { DrawerProps } from 'antd';
+import { useCallback, useId } from 'react';
+import { useOverlay } from './overlays/OverlayProvider';
+import type { OverlayLayer } from './overlays/overlayLogic';
+
+export type AppDrawerOverlayOptions = { layer?: OverlayLayer; parent?: string };
+
+export interface AppDrawerProps extends DrawerProps {
+  overlay?: AppDrawerOverlayOptions | false;
+  overlayId?: string;
+}
+
+/** Drawer presentation shares the application's Escape/navigation arbitration.
+ * The owner retains its existing close/flush callback and buffered write scope. */
+export function AppDrawer({ overlay = {}, overlayId, open, onClose, ...props }: AppDrawerProps) {
+  const autoId = useId();
+  const close = useCallback(() => {
+    (onClose as ((event?: unknown) => void) | undefined)?.();
+  }, [onClose]);
+
+  useOverlay({
+    id: overlayId || `app-drawer:${autoId}`,
+    layer: overlay === false ? 'panel' : overlay.layer || 'panel',
+    parent: overlay === false ? undefined : overlay.parent,
+    open: overlay === false ? false : Boolean(open),
+    close
+  });
+
+  return <Drawer {...props} open={open} onClose={onClose} keyboard={overlay === false ? props.keyboard : false} />;
+}
+

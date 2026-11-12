@@ -1,0 +1,25 @@
+{
+  "baseCommit": "5423be21112b61b0728cf10a0bc9883e0e308581",
+  "existingFiles": {
+    "src/App.tsx": "4823fffd2a241c64acf3246c07662173c6caac0c",
+    "src-tauri/legacy-read-only-channels.json": "9dd3671bdec2f628ef1b9722d6e2ff26f11b4b35",
+    "desktop-contract/ipc-contract.cjs": "e2920cf21e37030450cab61f008b9443295f5db7",
+    "src/pages/SettingsPage.tsx": "ef4c3ac912ead6863ed5db73e0cbafedaecacc98",
+    "src-tauri/src/lib.rs": "975dd692d52a51fb2e5dc586ec4d6f1ef28f64eb",
+    "src-tauri/src/desktop_service.rs": "cdaecef947da1106a3134edd5144f153c1b9741c",
+    "src-tauri/src/agent_service.rs": "7ec8f5601e4f8084efd02092f35f68e996d5f7b9",
+    "src-tauri/src/build_identity.rs": "4b592c14abb10db960040688e424e85b90faf22d",
+    "crates/aistudio-desktop-api/channels.json": "7e9565a3c1966cef82fd0fa7ed002e09d943a020",
+    "crates/aistudio-desktop-api/COVERAGE.md": "0d7ff063da80f9e2e5a9ff6bd631f1327011bac5",
+    "crates/aistudio-desktop-api/coverage.json": "4efabb7e5f9e2b3d900919f833f08946c3de0758",
+    "crates/aistudio-config-store/src/config.rs": "ee6291d6744cec213e95b5fdb646d4a6aa46f910",
+    "crates/aistudio-agent-data/src/lib.rs": "e12465533b50345e691ec63360f5bf458e96d30c",
+    "crates/aistudio-agent-data/src/server.rs": "fdc893e8171fb58433c352c06f7921c00e33a08d",
+    "crates/aistudio-agent-data/tests/adapter.rs": "6b51eba4befc43fecd93bb9e98052554710e0012",
+    "crates/aistudio-agent-data/tests/golden.rs": "3be46307489621da6e052e7eb23dc2218f8fd963",
+    "crates/aistudio-agent-data/tests/native.rs": "0315c325b213f3b538742b6d58c338429c2baead",
+    "crates/aistudio-account/src/service.rs": "315ecad47bb79219374638f9fb00979c9ec27ea8",
+    "crates/aistudio-desktop-api/src/data.rs": "cb340bfd18adb98342ee311be624fa3b92d607cf",
+    "crates/aistudio-desktop-api/src/lib.rs": "22c52a9ff87d19b1861eee4394e482fa489bbb86"
+  }
+}

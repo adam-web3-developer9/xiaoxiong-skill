@@ -1,0 +1,40 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> @xiaoxiong-ai/agent@0.1.0 test
+> node --test test/*.test.mjs
+
+✔ CLI maps routes and UTF-8 JSON via stdin without shell secrets (4.168791ms)
+✔ CLI refuses unknown flags and missing mutation IDs (2.959478ms)
+✔ redaction covers nested credential fields and literal submitted secrets (0.885895ms)
+✔ MCP initialize/list/call obey stdio JSON RPC and no raw call tool (3.802118ms)
+✔ CLI rejects surplus arguments before any application mutation (0.356518ms)
+✔ CLI/MCP catalog is exactly implemented application v2 methods (10.631327ms)
+✔ script export preserves episode order/text and uses safe filenames (1.138896ms)
+✔ public markers automatically find a custom application data root (14.073563ms)
+✔ marker must match current root descriptor instance, and explicit root does not scan markers (6.554274ms)
+✔ multiple live applications require an explicit profile choice (6.737882ms)
+✔ Node client talks to actual Rust Session/Auth/routes over test stdio (1034.719203ms)
+✔ discovers multiple packages, deduplicates roots and lazily reads resources (39.879161ms)
+✔ inspection surfaces scripts and unavailable tools without execution (7.960163ms)
+✔ installs local package without running scripts and refuses overwrite (13.073116ms)
+✔ rejects traversal, absolute paths and symbolic links on reads and install (3.753806ms)
+✔ missing, malformed, quoted and oversized metadata fail visibly (6.886665ms)
+✔ bundled operator skill can be loaded and inspected (2.791446ms)
+✔ creative adapter uses verified creation commands and rejects lossy mappings (1.71257ms)
+﹣ real OS local socket framing (explicitly skipped when host forbids listen) (10.206397ms) # Local socket bind unavailable: EPERM
+✔ application pairing waits; credential never reaches status and is stored privately (225.377359ms)
+✔ lost write response is unconfirmed, journaled, and never resent (109.78564ms)
+✔ channel secrets absent from results, error messages and receipts (106.268641ms)
+✔ legacy descriptor never grants standalone client access (1.439459ms)
+✔ transport keeps concurrent replies correlated (32.19735ms)
+✔ explicit RPC failures preserve uncertainty distinction (1.761464ms)
+✔ a new connection resumes cached grant without resubmitting the previous write (107.89418ms)
+✔ receipt storage failure after confirmation never changes success into failure (119.7178ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 1188.08981

@@ -1,0 +1,5 @@
+# Captured outputs/source snapshots retain their verified bytes, including final blank lines.
+docs/validation/*.txt whitespace=-blank-at-eof
+integration/aistudio/overlay/** whitespace=-blank-at-eof
+# Unified diff context lines use a literal space for an empty source line.
+integration/aistudio/aistudio-v2.patch whitespace=-blank-at-eol

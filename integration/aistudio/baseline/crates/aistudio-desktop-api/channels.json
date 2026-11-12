@@ -1,0 +1,914 @@
+[
+  {
+    "channel": "account:status",
+    "servedBy": "main",
+    "module": "account/ipc.cjs"
+  },
+  {
+    "channel": "account:action",
+    "servedBy": "main",
+    "module": "account/ipc.cjs"
+  },
+  {
+    "channel": "open-external-url",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "open-tutorial-window",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-check",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-download",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-cancel",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-channel",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-install",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "app-update-get-status",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "host:current-epoch",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "host:build-info",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "host:verify-build",
+    "servedBy": "main",
+    "module": "main.cjs"
+  },
+  {
+    "channel": "local-data:get-info",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:kv-get",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:settings-snapshot",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:drafts-list",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:drafts-list-summaries",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:drafts-get",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:image-editor-list",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:image-editor-get",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:rows-get",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:revisions",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:draft-summary-snapshot",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:secret-set",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:secret-delete",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:secret-status",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:secret-store-state",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:tasks-list",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "local-data:execution-logs-list",
+    "servedBy": "main",
+    "module": "local-data.cjs"
+  },
+  {
+    "channel": "task-history:query",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:stats",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:detail",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:facets",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:info",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:latest-terminal",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:export",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "task-history:reveal",
+    "servedBy": "main",
+    "module": "task-history-ipc.cjs"
+  },
+  {
+    "channel": "network-proxy:get-status",
+    "servedBy": "main",
+    "module": "network-proxy.cjs"
+  },
+  {
+    "channel": "network-proxy:apply",
+    "servedBy": "main",
+    "module": "network-proxy.cjs"
+  },
+  {
+    "channel": "network-proxy:test",
+    "servedBy": "main",
+    "module": "network-proxy.cjs"
+  },
+  {
+    "channel": "douyin:resolve",
+    "servedBy": "main",
+    "module": "douyin-download.cjs"
+  },
+  {
+    "channel": "douyin:choose-destination",
+    "servedBy": "main",
+    "module": "douyin-download.cjs"
+  },
+  {
+    "channel": "zhihu:read-manuscript",
+    "servedBy": "main",
+    "module": "zhihu-manuscript.cjs"
+  },
+  {
+    "channel": "zhihu:resolve-link",
+    "servedBy": "main",
+    "module": "zhihu-manuscript.cjs"
+  },
+  {
+    "channel": "prompts:export-to-folder",
+    "servedBy": "main",
+    "module": "prompt-export.cjs"
+  },
+  {
+    "channel": "folder-rename:select",
+    "servedBy": "main",
+    "module": "folder-rename.cjs"
+  },
+  {
+    "channel": "folder-rename:list",
+    "servedBy": "main",
+    "module": "folder-rename.cjs"
+  },
+  {
+    "channel": "folder-rename:apply",
+    "servedBy": "main",
+    "module": "folder-rename.cjs"
+  },
+  {
+    "channel": "folder-rename:restore",
+    "servedBy": "main",
+    "module": "folder-rename.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:status",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:check-login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:clear-login",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:clear-skipped",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "chatgpt-relay:list-skipped",
+    "servedBy": "main",
+    "module": "chatgpt-relay.cjs"
+  },
+  {
+    "channel": "update:prepare-install",
+    "servedBy": "host"
+  },
+  {
+    "channel": "update:release-install",
+    "servedBy": "host"
+  },
+  {
+    "channel": "update:drain-install",
+    "servedBy": "host"
+  },
+  {
+    "channel": "update:install-status",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:enqueue",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:enqueue-bulk",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:intent",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:estimate",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:estimate",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:estimate",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:recheck",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:start-now",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:retry",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:cancel-unsubmitted",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:clear-finished",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:inspect-image-provider",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-list",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-get",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-answer",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-use-api",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-reset",
+    "servedBy": "host"
+  },
+  {
+    "channel": "ai-task:manual-relay-session",
+    "servedBy": "host"
+  },
+  {
+    "channel": "env:takeover-confirm",
+    "servedBy": "host"
+  },
+  {
+    "channel": "env:gate-status",
+    "servedBy": "host"
+  },
+  {
+    "channel": "env:provider-resume",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:get",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:list-active",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:start",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:pause",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:resume",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:stop",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:retry-stage",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:ledger",
+    "servedBy": "host"
+  },
+  {
+    "channel": "batch:progress",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:start",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:start-derived-draft-from-case",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:resume",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:list",
+    "servedBy": "host"
+  },
+  {
+    "channel": "workflow:get",
+    "servedBy": "host"
+  },
+  {
+    "channel": "tencent-vod:remove-watermark-batch",
+    "servedBy": "host"
+  },
+  {
+    "channel": "tencent-vod:upload-reference-video",
+    "servedBy": "host"
+  },
+  {
+    "channel": "asset-public-storage:upload",
+    "servedBy": "host"
+  },
+  {
+    "channel": "public-media:status",
+    "servedBy": "host"
+  },
+  {
+    "channel": "public-media:publish",
+    "servedBy": "host"
+  },
+  {
+    "channel": "public-media:renew",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-job:start",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:select",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:inspect",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:list",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:list-summaries",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:get",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:update",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:delete",
+    "servedBy": "host"
+  },
+  {
+    "channel": "video-analysis:export-report",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:asset-write",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:asset-download",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:media-gc",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:video-durations",
+    "servedBy": "host"
+  },
+  {
+    "channel": "save-media-as",
+    "servedBy": "host"
+  },
+  {
+    "channel": "export-assets-zip",
+    "servedBy": "host"
+  },
+  {
+    "channel": "export-jianying",
+    "servedBy": "host"
+  },
+  {
+    "channel": "jianying:store-bgm",
+    "servedBy": "host"
+  },
+  {
+    "channel": "jianying:delete-bgm",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:drafts-create",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:drafts-delete",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:drafts-duplicate",
+    "servedBy": "host"
+  },
+  {
+    "channel": "telemetry:report",
+    "servedBy": "host"
+  },
+  {
+    "channel": "telemetry:settings",
+    "servedBy": "host"
+  },
+  {
+    "channel": "telemetry:clear",
+    "servedBy": "host"
+  },
+  {
+    "channel": "search:query",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:settings-transfer-export",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:settings-transfer-preview",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:settings-transfer-apply",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:settings-transfer-cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:library-transfer-export",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:library-transfer-preview",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:library-transfer-apply",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-export",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-import",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-preview",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-progress",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-backups",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:project-restore",
+    "servedBy": "host"
+  },
+  {
+    "channel": "data:apply",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:kv-set",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:kv-delete",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:execution-logs-upsert",
+    "servedBy": "host"
+  },
+  {
+    "channel": "local-data:execution-logs-clear",
+    "servedBy": "host"
+  },
+  {
+    "channel": "task-history:sync",
+    "servedBy": "host"
+  },
+  {
+    "channel": "task-history:prune-snapshots",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:snapshot",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:revision",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:override:set",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:override:clear",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:stage-rules:set",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:stage-rules:clear",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:unit:create",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:unit:update",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:unit:delete",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:flow:save",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:flow:delete",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:flow:set-default",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:flow:select",
+    "servedBy": "host"
+  },
+  {
+    "channel": "prompt:preview",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:status",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:list",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:enable",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:disable",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:members",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:import",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:sync",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:resolve-conflict",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:jobs",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:job-start",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:job-cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "sharing:job-reconcile",
+    "servedBy": "host"
+  },
+  {
+    "channel": "package-sharing:action",
+    "servedBy": "host"
+  },
+  {
+    "channel": "package-sharing:progress",
+    "servedBy": "host"
+  },
+  {
+    "channel": "package-sharing:cancel",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:list",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:import",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:remove",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:runtime",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:set-runtime",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:params",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:save-params",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:ui",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:action",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:choose-archive",
+    "servedBy": "host"
+  },
+  {
+    "channel": "typetale:choose-python",
+    "servedBy": "host"
+  },
+  {
+    "channel": "diagnostics:export",
+    "servedBy": "native",
+    "module": "src-tauri/src/bridge.rs"
+  },
+  {
+    "channel": "ai-task:detail",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/tasks.rs"
+  },
+  {
+    "channel": "channel-plugins:seed_status",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:initialize_seeds",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:catalog",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:list",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:configuration_options",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:choose_archive",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:install",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:install_catalog",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:set_enabled",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:remove",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:get_config",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "channel-plugins:save_config",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/channel_plugins.rs"
+  },
+  {
+    "channel": "local-data:secret-reveal",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/data.rs"
+  },
+  {
+    "channel": "local-data:secret-import-legacy",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/data.rs"
+  },
+  {
+    "channel": "joojo:login-open",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs"
+  },
+  {
+    "channel": "joojo:login-capture",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs"
+  },
+  {
+    "channel": "joojo:login-close",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/joojo_login.rs"
+  },
+  {
+    "channel": "jianying:select-draft-dir",
+    "servedBy": "native",
+    "module": "crates/aistudio-desktop-api/src/jianying.rs"
+  }
+]
