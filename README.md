@@ -2,7 +2,7 @@
 
 独立新项目：小熊AI操作 CLI、通用 Agent Skill、Claude/Codex/OpenCode 等工具可用的 MCP，以及主应用真实接入补丁。不会启动第二套数据库或任务宿主。
 
-源码仓库：`git@github.com:adam-web3-developer9/xiaoxiong-skill.git`。CLI/Skill/MCP 通过应用官方 Agent v2 接口工作。已在运行中的小熊AI 3.1.75 完成文本读写及真实智能分镜测试，详见 [真实应用记录](docs/validation/live-app-20261112.md)；普通 Windows 管道连接仍有待修复的问题，本轮实测使用诊断传输，不能视为普通 CLI 连接已验收。`integration/aistudio` 保留针对 `aistudio@5423be21112b61b0728cf10a0bc9883e0e308581` 的原始接入补丁，历史源码验证边界见 [验证记录](docs/verification.md)。
+源码仓库：`git@github.com:adam-web3-developer9/xiaoxiong-skill.git`。CLI/Skill/MCP 通过应用官方 Agent v2 接口工作。2026-11-16 已用普通 Windows CLI 连接运行中的小熊AI 3.1.79，验证小助手批次查询、进度及本地构造批次的真实估算，见 [小助手接入验证](docs/validation/batch-assistant-20261116.md)。3.1.75 的文本读写与真实智能分镜历史测试见 [旧版应用记录](docs/validation/live-app-20261112.md)，当时使用诊断传输。`integration/aistudio` 保留针对 `aistudio@5423be21112b61b0728cf10a0bc9883e0e308581` 的原始接入补丁，历史源码验证边界见 [验证记录](docs/verification.md)。
 
 ## 三步使用
 
@@ -66,6 +66,8 @@ MCP 使用通用 stdio 协议，可供 Claude、Codex、OpenCode 等支持该协
 
 ## 常用命令
 
+小助手现可用 `batch prepare` 将剧集和步骤选择转换成完整批次文件，然后估算、启动和控制同一轮。参数和暂停/停止语义见 [小助手指南](skills/xiaoxiong-ai/references/batch-assistant.md)。
+
 ```sh
 xiaoxiong auth status
 xiaoxiong account status
@@ -79,6 +81,11 @@ xiaoxiong task estimate --file intent.json
 xiaoxiong task intent --file intent.json
 xiaoxiong task wait TASK_ID
 xiaoxiong task retry TASK_ID
+xiaoxiong batch prepare --file selection.json --output batch.json
+xiaoxiong batch estimate --file batch.json
+xiaoxiong batch start --file batch.json
+xiaoxiong batch get DRAFT_ID
+xiaoxiong batch progress --file run.json
 xiaoxiong channels list
 xiaoxiong channels models PROVIDER_ID --capability video
 xiaoxiong channels create --file channel.json

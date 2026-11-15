@@ -4,6 +4,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { AgentClient, ALL_SCOPES } from "../src/client.mjs";
 import { METHODS } from "../src/catalog.mjs";
+import { prepareBatch } from "../src/batch.mjs";
 import { exportScripts } from "../src/export.mjs";
 import { serveMcp } from "../src/mcp.mjs";
 import { assert, publicError, secretValues } from "../src/errors.mjs";
@@ -18,6 +19,7 @@ export const help = {
     "auth logout",
     "doctor",
     "capabilities",
+    "batch prepare --file selection.json [--output batch.json] (local only)",
     ...Object.keys(METHODS).filter((x) => x !== "capabilities"),
     "export script --file selection.json --output DIRECTORY",
     "export jianying --file intent.json",
@@ -94,6 +96,12 @@ async function jsonInput(file, input) {
     });
   }
 }
+async function saveOutput(result, file) {
+  await fs.writeFile(file, JSON.stringify(result, null, 2) + "\n", {
+    flag: "wx", mode: 0o600,
+  });
+  return { ok: true, result: { savedTo: path.resolve(file) } };
+}
 export async function main(
   argv,
   {
@@ -158,6 +166,13 @@ export async function main(
         ok: true,
         result: await readReceipt(flags["--home"] || stateHome(), id),
       };
+    if (domain === "batch" && action === "prepare") {
+      payload = await jsonInput(flags["--file"], stdin);
+      const result = prepareBatch(payload);
+      return flags["--output"]
+        ? await saveOutput(result, flags["--output"])
+        : { ok: true, result };
+    }
     client = clientFactory({
       dataRoot: flags["--data-root"],
       home: flags["--home"],
@@ -248,12 +263,7 @@ export async function main(
       );
     }
     if (flags["--output"]) {
-      await fs.writeFile(
-        flags["--output"],
-        JSON.stringify(result, null, 2) + "\n",
-        { flag: "wx", mode: 0o600 },
-      );
-      return { ok: true, result: { savedTo: path.resolve(flags["--output"]) } };
+      return await saveOutput(result, flags["--output"]);
     }
     return {
       ok: true,

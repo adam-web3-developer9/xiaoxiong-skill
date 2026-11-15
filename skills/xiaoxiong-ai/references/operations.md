@@ -5,6 +5,7 @@ Use `xiaoxiong --help` for the installed CLI's exact argument syntax and `xiaoxi
 - Connection: `auth login`, `auth status`, `auth logout`.
 - Drafts/projects: `draft list`, `draft get`, `draft rows`; validated modifications through `draft apply`.
 - Work scheduling: `task actions` discovers supported operations; `task intent` submits an authorized action; `task list`, `task get`, `task wait` track work.
+- Batch assistant (小助手): read [batch-assistant.md](batch-assistant.md) for episode/stage selection, local `batch prepare`, estimates, start and control. Use `batch get/list/progress` to inspect the app's run; do not build a second scheduler or replace an existing run to resume it.
 - Recovery: `task recheck` reconciles a provider outcome; `task retry` is a new deliberate retry only after checking status and approval; `task cancel` requests cancellation and does not promise a refund or immediate stop.
 - Accounts and quotas: `account status`; never expose stored credentials or assume eligibility from agent authorization.
 - Channel configuration: `channels list/get/update` for safe public projections and approved patches. Secret writes use advertised write-only create/update with stdin or a JSON file, never argv, stdout, logs or response data. Changed authentication destinations require reauthorization/new keys.

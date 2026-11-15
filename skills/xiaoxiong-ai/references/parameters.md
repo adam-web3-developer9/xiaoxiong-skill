@@ -16,6 +16,8 @@
 
 ## 批量与工作流
 
+小助手的完整参数与使用示例见 [batch-assistant.md](batch-assistant.md)。`batch prepare --file selection.json --output batch.json` 只在本地构造 `{draftId,run}`，输出文件直接用于 estimate/start。
+
 - `batch get DRAFT_ID`；`batch list`。
 - `batch estimate/start --file`：`{draftId,run}`。
 - `batch progress/pause/stop/resume --file`：`{draftId,runId}`。

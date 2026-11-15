@@ -1,6 +1,6 @@
 ---
 name: xiaoxiong-ai
-description: Operate 小熊AI through its official local app interface for projects, scripts, assets, storyboards, generation tasks, exports, accounts and public channel configuration. Use with the xiaoxiong CLI; pair with creative Agent Skills for content creation.
+description: Operate 小熊AI through its official local app interface for projects, scripts, assets, storyboards, generation tasks, batch assistant (小助手), exports, accounts and public channel configuration. Use with the xiaoxiong CLI; pair with creative Agent Skills for content creation.
 ---
 
 # 小熊AI operator
@@ -19,6 +19,8 @@ Use this skill to turn the user's requested creative work into operations in the
 ## Work
 
 Read [operations.md](references/operations.md) for CLI routing, write safety and task lifecycle. Before creating or importing scripts, shots or prompts from an external creative Skill, read [content-format.md](references/content-format.md). For third-party packages, also read [creative-skills.md](references/creative-skills.md).
+
+For 小助手 / batch production across episodes, read [batch-assistant.md](references/batch-assistant.md). Use `batch prepare` to build the application run payload locally, then the advertised `batch estimate/start/progress/pause/resume/stop/retry-stage` routes. The application owns scheduling; keep existing creator scripts and prompts by selecting only the requested stages.
 
 External creative Skills own the writing, shot design and prompt wording. Each imported shot needs its script content (`scriptContent`) and seconds (`duration`); internal production metadata such as `cutPlan` and visual beats is optional. The script layout is a recommendation. The required prompt convention is the application's asset-reference syntax so the app can match, upload and submit the actual media. Do not regenerate the creator's work with application templates unless the user requests it.
 

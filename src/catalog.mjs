@@ -1,4 +1,5 @@
 /** Methods map to application-owned capabilities; nothing routes arbitrary IPC. */
+import { batchRunSchema } from "./batch.mjs";
 export const METHODS = {
   capabilities: { method: "capabilities", read: true },
   "account status": { method: "account.status", read: true },
@@ -92,7 +93,7 @@ const defs = {
   status: { type: "string" },
   type: { type: "string" },
   options: obj,
-  run: obj,
+  run: batchRunSchema,
   draft: obj,
   target: {
     type: "object",

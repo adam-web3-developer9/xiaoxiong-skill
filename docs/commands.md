@@ -16,6 +16,8 @@
 
 ## 批量与工作流
 
+小助手的剧集选择、分镜模式及完整生命周期见 [小助手指南](../skills/xiaoxiong-ai/references/batch-assistant.md)。`batch prepare --file selection.json --output batch.json` 在本地构造正式 `{draftId,run}`，不提交任务；输出文件直接用于 estimate/start。
+
 - `batch get DRAFT_ID`；`batch list`。
 - `batch estimate/start --file`：`{draftId,run}`。
 - `batch progress/pause/stop/resume --file`：`{draftId,runId}`。
