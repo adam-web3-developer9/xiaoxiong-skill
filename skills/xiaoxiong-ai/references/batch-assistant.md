@@ -47,7 +47,9 @@ xiaoxiong batch estimate --file batch.json
 
 `prepare` 只在本地生成 `{draftId,run}`，不连接应用、不生成任务、不收费。`--output` 写出的 JSON 可直接交给 estimate/start；省略时返回普通 `{ok:true,result}`。开始后保留该文件及其中的 runId；不要用新的 prepare 代替结果未知的开始请求。
 
-`storyboardMode` 支持 `max15`、`max30`、`greedy15`、`greedy30`，省略使用 **CLI 的 max15 默认**。它不读取应用的项目/全局默认；要沿用界面选择，先在应用确认当前有效方式并填写。模式对应 `storyboardDuration=15/30`、`storyboardForceMax=true` 和 `storyboardGreedy=false/true`。
+`storyboardMode` 支持 `max15`、`max30`、`greedy15`、`greedy30`，省略使用 **CLI 的 max15 默认**。prepare 不自动读取应用默认。要沿用项目方式，读取 `draft get` 的 `effectiveGenerationSettings.storyboardTargetDuration/storyboardGreedy`，将 15/30 与 false/true 对应为 max15/max30/greedy15/greedy30；该有效值由宿主合并项目覆盖与全局设置。原 `globalGenSettings` 只表示项目覆盖，缺字段/null 可以表示继承，不能判断项目未设置。旧版应用未返回有效值时保持未知，在应用确认后显式填写，不能把 CLI 默认冒称项目设置。模式对应 run 的 `storyboardDuration=15/30`、`storyboardForceMax=true` 和 `storyboardGreedy=false/true`。
+
+`batch get` 的 `storyboardDuration/storyboardForceMax/storyboardGreedy/storyboardEnabled` 是本轮保存的配置，可以与当前项目默认不同；字段仅在宿主记录存在时返回。旧版公共投影会漏掉这些字段，缺失不能推断为 15 秒、非贪心或项目未设置。应用源码补齐接口后须正常构建更新，CLI 无法从缺失响应还原本轮配置。
 
 `storyboardEnabled` 请按应用实际故事板模式填写：明确 false 时，prepare 同界面一样排除 `imagePrompt`、`shotImage`。省略时宿主按有故事板模式处理，并不继承项目/全局的关闭选择；当前关闭故事板时应显式传 false。自动重试次数、模型、渠道、并发、账户权限及生成准备由宿主当前设置决定，prepare 不复制或覆写这些设置。
 
@@ -107,4 +109,4 @@ MCP 对应 `xiaoxiong_batch_estimate/start/get/list/progress/pause/stop/resume/r
 - `run.episodes` 以所选分集 ID 为键，每项 `{episodeId,title,stages}`。
 - 每集 stages 包含上述全部八个键。选中阶段 `{status:"idle",taskIds:[],attempt:0}`，未选中阶段 `{status:"skipped",taskIds:[],attempt:0}`。
 
-这些是新一轮的初始状态。开始后使用应用返回的状态，不手改 taskIds、attempt、version 或调度进度。现有 v2 公共投影不保证返回分镜配置、环境阻塞原因或停止统计；缺失信息保持未知，不据空对象推断环境就绪。
+这些是新一轮的初始状态。开始后使用应用返回的状态，不手改 taskIds、attempt、version 或调度进度。公共投影的字段随应用版本而异；分镜配置、环境阻塞原因或停止统计未返回时保持未知，不据空对象推断环境就绪。
