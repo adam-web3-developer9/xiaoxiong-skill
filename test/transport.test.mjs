@@ -16,8 +16,10 @@ async function fixture(t, handler) {
       ? `\\\\.\\pipe\\${path.basename(root)}`
       : path.join(root, "app.sock");
   const calls = [];
+  const connections = [];
   const sockets = new Set();
-  const socketFactory = () => {
+  const socketFactory = (endpoint) => {
+    connections.push(endpoint);
     const socket = new EventEmitter();
     socket.destroyed = false;
     socket.setEncoding = () => {};
@@ -75,6 +77,7 @@ async function fixture(t, handler) {
   return {
     root,
     calls,
+    connections,
     socketPath,
     home: path.join(root, "state"),
     socketFactory,
@@ -295,6 +298,100 @@ test("a new connection resumes cached grant without resubmitting the previous wr
   });
   assert.equal(f.calls.filter((m) => m.method === "auth.resume").length, 2);
 });
+
+test("application restart rediscovers its endpoint and resumes a persistent grant without pairing or replay", async (t) => {
+  const app = authHandler((m) => ({ id: m.params.draftId }));
+  app.approve();
+  const f = await fixture(t, (m, socket) => {
+    const result = app.handle(m, socket);
+    return m.method === "auth.resume"
+      ? {
+          ...result,
+          scopes: ["read", "edit"],
+          draftIds: ["draft"],
+          expiresAt: null,
+        }
+      : result;
+  });
+  const options = {
+    dataRoot: f.root,
+    home: f.home,
+    socketFactory: f.socketFactory,
+  };
+  const c = new AgentClient(options);
+  t.after(() => c.close());
+  await c.login();
+  await c.call("draft.apply", {
+    commandId: "before-restart",
+    draftId: "draft",
+    commands: [],
+  });
+  c.transport.socket.destroy();
+  const endpoint = `${f.socketPath}-restarted`;
+  await fs.writeFile(
+    path.join(f.root, "agent-v2-connection.json"),
+    JSON.stringify({
+      protocol: 2,
+      endpoint,
+      dataRoot: f.root,
+      instanceId: "restarted-app",
+    }),
+  );
+  const status = await c.status();
+  assert.equal(status.connected, true);
+  assert.equal(status.expiresAt, null);
+  assert.deepEqual(status.scopes, ["read", "edit"]);
+  assert.deepEqual(f.connections, [f.socketPath, endpoint]);
+  assert.equal(c.descriptor.instanceId, "restarted-app");
+  c.close();
+  const second = new AgentClient(options);
+  t.after(() => second.close());
+  assert.equal((await second.status()).expiresAt, null);
+  const saved = JSON.parse(await fs.readFile(credentialPath(f.home, f.root), "utf8"));
+  assert.equal(saved.expiresAt, null);
+  assert.equal(saved.token, "private-session-token");
+  assert.equal(f.calls.filter((m) => m.method === "auth.request").length, 1);
+  assert.equal(f.calls.filter((m) => m.method === "auth.resume").length, 3);
+  assert.equal(f.calls.filter((m) => m.method === "draft.apply").length, 1);
+});
+
+test("status revalidates an open connection and clears a revoked grant without pairing or replay", async (t) => {
+  const app = authHandler(() => ({}));
+  app.approve();
+  let revoked = false;
+  const f = await fixture(t, (m, socket) => {
+    if (m.method === "auth.resume" && revoked)
+      throw Object.assign(new Error("Connection was revoked"), {
+        code: "AGENT_UNAUTHORIZED",
+      });
+    return app.handle(m, socket);
+  });
+  const c = new AgentClient({
+    dataRoot: f.root,
+    home: f.home,
+    socketFactory: f.socketFactory,
+  });
+  t.after(() => c.close());
+  await c.login();
+  assert.equal((await c.status()).connected, true);
+  revoked = true;
+  const status = await c.status();
+  assert.equal(status.connected, false);
+  assert.equal(status.reason, "AGENT_UNAUTHORIZED");
+  assert.equal(c.transport.token, undefined);
+  assert.equal(
+    await fs.readFile(credentialPath(f.home, f.root)).catch((e) => e.code),
+    "ENOENT",
+  );
+  await assert.rejects(c.call("draft.get", { draftId: "draft" }), {
+    code: "AUTH_REQUIRED",
+  });
+  assert.equal(f.connections.length, 1);
+  assert.equal(f.calls.filter((m) => m.method === "auth.resume").length, 3);
+  assert.equal(f.calls.filter((m) => m.method === "auth.request").length, 1);
+  assert.equal(f.calls.filter((m) => m.method === "draft.get").length, 0);
+});
+
 test("receipt storage failure after confirmation never changes success into failure", async (t) => {
   let home;
   const app = authHandler(async () => {

@@ -189,9 +189,13 @@ export class AgentClient {
       client: this.identity,
     };
   }
-  async authorize() {
+  async authorize({ refresh = false } = {}) {
     await this.connect();
-    if (this.credential && this.authenticatedTransport === this.transport)
+    if (
+      !refresh &&
+      this.credential &&
+      this.authenticatedTransport === this.transport
+    )
       return this.publicSession();
     const c =
       this.credential ||
@@ -202,18 +206,25 @@ export class AgentClient {
         "Run xiaoxiong auth login, then approve the connection in 小熊AI.",
       );
     try {
-      await this.transport.request("auth.resume", {
+      const resumed = await this.transport.request("auth.resume", {
         sessionId: c.sessionId,
         token: c.token,
       });
+      const credential = { ...c };
+      for (const key of ["scopes", "draftIds", "expiresAt"])
+        if (Object.hasOwn(resumed || {}, key)) credential[key] = resumed[key];
+      if (JSON.stringify(credential) !== JSON.stringify(c))
+        await saveCredential(this.home, this.descriptor.dataRoot, credential);
       this.transport.token = c.token;
-      this.credential = c;
+      this.credential = credential;
       this.authenticatedTransport = this.transport;
       return this.publicSession();
     } catch (e) {
       if (/AUTH|GRANT|EXPIRED|REVOKED/.test(e.code || "")) {
         await deleteCredential(this.home, this.descriptor.dataRoot);
         this.credential = null;
+        this.transport.token = undefined;
+        this.authenticatedTransport = null;
       }
       throw e;
     }
@@ -221,7 +232,10 @@ export class AgentClient {
   async status() {
     await this.connect();
     try {
-      return { ...(await this.authorize()), application: this.hello };
+      return {
+        ...(await this.authorize({ refresh: true })),
+        application: this.hello,
+      };
     } catch (e) {
       if (/AUTH|GRANT|EXPIRED|REVOKED/.test(e.code || ""))
         return {

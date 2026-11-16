@@ -7,7 +7,7 @@
 ## 三步使用
 
 1. 正常构建并启动已支持 Agent v2 授权的小熊AI。只有仍处于上述旧基线的开发副本才使用 `integration/aistudio` 接入补丁；不要将旧补丁覆盖到已升级的应用。
-2. 在此项目运行 `node bin/xiaoxiong.mjs auth login --scopes all`。小熊AI出现“Agent连接”面板，核对验证码与权限，点击允许。账户登录和激活仍在应用内完成，不复制账号密码。`all` 明确包含生成、导出、渠道修改和密钥只写权限；只读可用 `--scopes read,channels.read`。
+2. 首次在此项目运行 `node bin/xiaoxiong.mjs auth login --scopes all`。小熊AI出现“Agent连接”面板，核对验证码与权限，点击允许。以后先运行 `auth status` 或直接执行所需命令，应用重启后自动恢复已批准连接。账户登录和激活仍在应用内完成，不复制账号密码。`all` 明确包含生成、导出、渠道修改和密钥只写权限；只读可用 `--scopes read,channels.read`。
 3. 运行 `node bin/xiaoxiong.mjs draft list`。需要非默认数据目录时加 `--data-root /path/to/aistudio-data`。应用在标准临时目录发布无凭据发现标记，支持自定义D盘/便携数据目录；多个运行实例会要求显式选择。标记不可用时可用 --data-root 指定。
 
 环境：Node.js 22 或以上；CLI/MCP 无第三方运行依赖，不用 npm install。可在用户明确选择的环境通过 `npm link` 注册 `xiaoxiong` 命令，也可以一直使用 `node /absolute/path/bin/xiaoxiong.mjs`。
@@ -16,7 +16,7 @@
 
 - CLI 提出申请，**只有应用原生可信窗口能批准**。验证码只是供人核对，不能兑换访问令牌。
 - 权限：read、edit、generate、export、channels.read、channels.write、channels.credentials.write；可限制草稿ID，`*` 表示全部草稿，`--drafts none` 表示不授予任何草稿权限。
-- 已批准会话可跨CLI进程复用，当前授权8小时有效，应用重启、账户变更或主动撤销后重新授权。撤销阻止新操作，不自动取消已接收任务。
+- 支持持久授权的应用会保留已批准连接，可跨CLI进程及应用重启复用，`expiresAt:null` 表示长期有效，直到在应用中撤销、CLI退出授权或应用账户重新登录/变更。旧版进程内授权无法在升级后恢复，需再批准一次；旧服务端返回的有限期限仍由应用执行。撤销阻止新操作，不自动取消已接收任务。
 - 连接凭证与应用账户凭证分离，不出现在 stdout/MCP/日志。客户端保存在本机用户状态目录，POSIX权限600；不引入钥匙串依赖。此机制不隔离同一OS账户下恶意软件。
 - v2不读取旧连接token。原v1开发入口默认关闭，仅 `AISTUDIO_AGENT_LEGACY_V1=1` 显式开启兼容。开启后旧入口不受v2草稿授权管理，仅适合可信开发环境。
 
